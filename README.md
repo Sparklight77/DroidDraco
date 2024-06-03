@@ -10,7 +10,7 @@ It should be noted that i don't know bash well, i studied saveral repos and in t
 
 3. Open Termux and run this command
 ```
-curl -o Draco_injector.sh https://github.com/Sparklight77/Auto-Draco-Injector/blob/main/draco_injector.sh && apt update -y && apt upgrade -y && clear
+curl -o draco_injector.sh https://github.com/Sparklight77/Auto-Draco-Injector/releases/download/V1.0---0.1.4/draco_injector.sh && apt update -y && apt upgrade -y && clear && bash draco_injector.sh
 ```
 
 4. Follow Instructions 
