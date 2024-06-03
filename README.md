@@ -8,7 +8,10 @@ It should be noted that i don't know bash well, i studied saveral repos and in t
 
 2. Place Minecraft Apk file in Downloads folder (note that Apk should have Minecraft in its name otherwise script won't detect it)
 
-3. Open Termux and run this command ```curl -o Draco_injector.sh https://github.com/Sparklight77/Auto-Draco-Injector/blob/main/Draco_injector.sh && apt update -y && apt upgrade -y && clear```
+3. Open Termux and run this command
+```
+curl -o Draco_injector.sh https://github.com/Sparklight77/Auto-Draco-Injector/blob/main/draco_injector.sh && apt update -y && apt upgrade -y && clear
+```
 
 4. Follow Instructions 
 
