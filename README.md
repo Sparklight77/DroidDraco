@@ -22,4 +22,4 @@ You Should be connected to network during Patch process. Playstore Minecraft hav
 If you encounter any issues then report it in mcpegamerxx9541 repository which you can find [here](https://github.com/mcbegamerxx954/draco-injector/issues), simply open an issue, tell your problem and mention you used my script for patching Minecraft.
 
 # Note
-If you find any issues or want to suggest me something then open an issue. Iam always looking for improvements.
+If you find any issues in this script or want to suggest me something then open an issue. Iam always looking for improvements.
