@@ -4,7 +4,7 @@ A bash script for Termux to automate the complex process of patching Minecraft u
 It should be noted that i don't know bash well, i studied saveral repos and in turn i was able to create something like this.
  
 # Tutorial
-1. You need to install [termux](https://github.com/termux/termux-app/releases)
+1. You need to install [Termux](https://github.com/termux/termux-app/releases)
 
 2. Place Minecraft Apk file in Downloads folder (note that Apk should have Minecraft in its name otherwise script won't detect it)
 
