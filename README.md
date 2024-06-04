@@ -2,7 +2,11 @@
 A bash script for Termux to automate the complex process of patching Minecraft using Draco-Injector. Based on a repo by mcbegamerxx9541 which you can find [here](https://github.com/mcbegamerxx954/draco-injector). Thanks to [callmesoumya2063](https://github.com/CallMeSoumya2063) for testing and fixing few issues and giving me his Minecraft scanner script part.
 
 It should be noted that i don't know bash well, i studied saveral repos and with chatGPT help i am able to create something like this.
- 
+# ⚠️Improtant 
+1. It doesn't support bata patching till now. Only stable releases patching are possible.
+
+2. Android only is supported (till date)
+
 # Tutorial
 1. You need to install [Termux](https://github.com/termux/termux-app/releases)
 
@@ -26,3 +30,4 @@ If you encounter any issues then report it in mcpegamerxx9541 repository which y
 
 # Note
 If you find any issues in this script or want to suggest me something then open an issue. Iam always looking for improvements.
+
