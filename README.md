@@ -4,9 +4,14 @@ A bash script designed for Termux to simplify the process of patching Minecraft 
 
 I must mention that I'm not well-versed in bash scripting. However, by studying various repositories and with the help of ChatGPT, I was able to create this script.
 
+# 💠 Supported Architectures
+arm64-v8a (aarch64)
+armabi-v7a (armv7l)
+Intel x86_64 
+
 # ⚠️ Important
 1. Beta patching is not supported currently. Only stable releases can be patched.
-2. Only Android is supported at the moment (support for other platforms coming soon).
+2. IOS is not supported 
 
 # ✏️ Tutorial
 1. Install [Termux](https://github.com/termux/termux-app/releases).
