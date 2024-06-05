@@ -19,12 +19,12 @@ read -p "Select desired architecture: "  arch
 case "$arch" in
     1)
         arch="aarch64"
-        injector_link="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.4/injector-aarch64-linux-android.tar.gz"
+        injector_link="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.5/injector-aarch64-linux-android.tar.gz"
         injector_file="injector-aarch64-linux-android.tar.gz"
         ;;
     2)
         arch="armv7l"
-        injector_link="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.4/injector-armv7-linux-androideabi.tar.gz"
+        injector_link="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.5/injector-armv7-linux-androideabi.tar.gz"
         injector_file="injector-armv7-linux-androideabi.tar.gz"
         ;;
     *)
