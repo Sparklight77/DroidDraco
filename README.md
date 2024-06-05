@@ -6,8 +6,10 @@ I must mention that I'm not well-versed in bash scripting. However, by studying 
 
 # 💠 Supported Architectures
 arm64-v8a (aarch64)
+
 armabi-v7a (armv7l)
-Intel x86_64 
+
+Intel x86_64
 
 # ⚠️ Important
 1. Beta patching is not supported currently. Only stable releases can be patched.
