@@ -1,33 +1,29 @@
 # Auto-Draco-Injector
-A bash script for Termux to automate the complex process of patching Minecraft using Draco-Injector. Inspired by [callmesoumya2063 repository](https://github.com/CallMeSoumya2063/draco-injector-script) based on a repo by mcbegamerxx9541 which you can find [here](https://github.com/mcbegamerxx954/draco-injector). Thanks to [callmesoumya2063](https://github.com/CallMeSoumya2063) for testing and fixing few issues and giving me his Minecraft scanner script part.
 
-It should be noted that i don't know bash well, i studied saveral repos and with chatGPT help i am able to create something like this.
+A bash script designed for Termux to simplify the process of patching Minecraft with Draco-Injector. This script is inspired by the [callmesoumya2063 repository](https://github.com/CallMeSoumya2063/draco-injector-script), which is based on the work of [mcbegamerxx9541](https://github.com/mcbegamerxx954/draco-injector). Special thanks to [callmesoumya2063](https://github.com/CallMeSoumya2063) for testing, fixing issues, and providing the Minecraft scanner script.
 
-# ⚠️Improtant 
-1. It doesn't support bata patching till now. Only stable releases patching are possible.
+I must mention that I'm not well-versed in bash scripting. However, by studying various repositories and with the help of ChatGPT, I was able to create this script.
 
-2. Android only is supported (others comming soon after)
+# ⚠️ Important
+1. Beta patching is not supported currently. Only stable releases can be patched.
+2. Only Android is supported at the moment (support for other platforms coming soon).
 
-# ✏️Tutorial
-1. You need to install [Termux](https://github.com/termux/termux-app/releases)
+# ✏️ Tutorial
+1. Install [Termux](https://github.com/termux/termux-app/releases).
+2. Place the Minecraft APK file in the Downloads folder (ensure the APK file name contains "Minecraft" for the script to detect it).
+3. Open Termux and run the following command:
+   ```bash
+   curl -o draco_injector.sh https://raw.githubusercontent.com/Sparklight77/Auto-Draco-Injector/main/draco_injector.sh && apt update -y && apt upgrade -y && clear && bash draco_injector.sh
+   ```
+4. Follow the on-screen instructions.
+5. After patching once, simply use `bash draco-injector.sh` to start the injector.
+6. After patching the Minecraft APK, you can find the patched APK in the `Patch` folder in the home directory.
 
-2. Place Minecraft Apk file in Downloads folder (note that Apk should have Minecraft in its name otherwise script won't detect it)
+> [!Note]  
+> You need to be connected to the internet during the patch process. The Playstore version of Minecraft contains both 64-bit and 32-bit code in a single APK. To separate them, use [ApkTool M](https://maximoff.su/apktool/?lang=en) with the antisplit feature and place the resulting APK in the Downloads folder. Then run the injector start command. Note that patching and installing a 32-bit Minecraft APK on a 64-bit device may result in performance issues, so it's recommended to use the appropriate APK for your device.
 
-3. Open Termux and run this command
-```
-curl -o draco_injector.sh https://raw.githubusercontent.com/Sparklight77/Auto-Draco-Injector/main/draco_injector.sh && apt update -y && apt upgrade -y && clear && bash draco_injector.sh
-```
+> [!important]  
+> If you encounter any issues, report them in the [mcbegamerxx9541 repository](https://github.com/mcbegamerxx954/draco-injector/issues). Open an issue, describe your problem, and mention that you used this script for patching Minecraft.
 
-4. Follow Instructions 
-
-5. After patching once just use `bash draco-injector.sh` for starting injector
-
-6. After Patching Minecraft Apk, you can find it in `Patch`folder in home directory
->[!Note]
-You Should be connected to network during Patch process. Playstore Minecraft have 64bit and 32bit merged in one apk, to make them saperate you have to use [ApkTool M](https://maximoff.su/apktool/?lang=en) antisplit feature and put the output apk in downloads folder then you can run injector start command. You can patch and install 32bit Minecraft apk on 64bit device but it will result in performance issues so its recommended to use apk according to device.
-
->[!important]
-If you encounter any issues then report it in mcpegamerxx9541 repository which you can find [here](https://github.com/mcbegamerxx954/draco-injector/issues), simply open an issue, tell your problem and mention you used my script for patching Minecraft.
-
-# 📝Note
-If you find any issues in this script or want to suggest me something then open an issue. Iam always looking for improvements.
+# 📝 Note
+If you find any issues with this script or have suggestions, please open an issue. I am always looking for ways to improve.
