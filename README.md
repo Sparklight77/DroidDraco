@@ -17,7 +17,7 @@ I must mention that I'm not well-versed in bash scripting. However, by studying 
    ```
 4. Follow the on-screen instructions.
 5. After patching once, simply use `bash draco-injector.sh` to start the injector.
-6. After patching the Minecraft APK, you can find the patched APK in the `Patch` folder in the home directory.
+6. After patching the Minecraft APK, you can find the patched APK in the `MCPatch` folder in the home directory.
 
 > [!Note]  
 > You need to be connected to the internet during the patch process. The Playstore version of Minecraft contains both 64-bit and 32-bit code in a single APK. To separate them, use [ApkTool M](https://maximoff.su/apktool/?lang=en) with the antisplit feature and place the resulting APK in the Downloads folder. Then run the injector start command. Note that patching and installing a 32-bit Minecraft APK on a 64-bit device may result in performance issues, so it's recommended to use the appropriate APK for your device.
