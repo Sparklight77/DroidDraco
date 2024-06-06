@@ -20,7 +20,7 @@ Intel x86_64
 2. Place the Minecraft APK file in the Downloads folder (ensure the APK file name contains "Minecraft" for the script to detect it).
 3. Open Termux and run the following command:
    ```bash
-   curl -o install.sh https://raw.githubusercontent.com/Sparklight77/auto-draco-injector/main/install.sh
+   curl -o install.sh https://raw.githubusercontent.com/Sparklight77/auto-draco-injector/main/install.sh && install.sh
    ```
 4. Follow the on-screen instructions.
 5. After patching once, simply use `bash draco-injector.sh` to start the injector.
