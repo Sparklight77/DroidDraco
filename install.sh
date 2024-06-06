@@ -13,4 +13,4 @@ curl -o draco_injector.sh https://raw.githubusercontent.com/Sparklight77/Auto-Dr
 rm -- "$0"
 
 #message
-echo"execute  draco_injector.sh  to Start injector"
+echo"execute  bash draco_injector.sh  to Start injector"
