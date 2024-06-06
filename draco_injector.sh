@@ -25,7 +25,7 @@ BOLD_WHITE='\033[1;37m'
 
 # Decorative fancy text
 echo -e "${YELLOW} Initializing Injector Setup... ${REST}"
-sleep 7
+sleep 1
 
 # Check storage permissions
 storage_dir="storage"
