@@ -12,5 +12,6 @@ curl -o draco_injector.sh https://raw.githubusercontent.com/Sparklight77/Auto-Dr
 # Remove the script itself
 rm -- "$0"
 
-#message
-echo"execute  bash draco_injector.sh  to Start injector"
+# message
+
+echo "execute \"bash draco_injector.sh\" to start injector"
