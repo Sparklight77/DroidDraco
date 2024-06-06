@@ -1,6 +1,9 @@
 #!/bin/bash
 #clear terminal
 clear
+#Fancy text
+figlet -f big "DRACO"
+
 # Define color variables
 RESET='\033[0m'
 BLACK='\033[0;30m'
@@ -19,6 +22,7 @@ BOLD_BLUE='\033[1;34m'
 BOLD_MAGENTA='\033[1;35m'
 BOLD_CYAN='\033[1;36m'
 BOLD_WHITE='\033[1;37m'
+
 # Decorative fancy text
 echo -e "${YELLOW} Initializing Injector Setup... ${REST}"
 sleep 7
