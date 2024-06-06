@@ -1,7 +1,7 @@
 #!/bin/bash
-#clear terminal
+# Clear terminal
 clear
-#Fancy text
+# Fancy text
 figlet -f big "DRACO"
 
 # Define color variables
@@ -24,7 +24,7 @@ BOLD_CYAN='\033[1;36m'
 BOLD_WHITE='\033[1;37m'
 
 # Decorative fancy text
-echo -e "${YELLOW} Initializing Injector Setup... ${REST}"
+echo -e "${YELLOW} Initializing Injector Setup... ${RESET}"
 sleep 1
 
 # Check storage permissions
@@ -35,11 +35,38 @@ else
     termux-setup-storage
 fi
 
+# Function to auto-detect architecture
+auto_detect() {
+    detected_arch=$(uname -m)
+    case "$detected_arch" in
+        aarch64)
+            arch="aarch64"
+            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-aarch64-linux-android.tar.gz"
+            injector_filename="injector-aarch64-linux-android.tar.gz"
+            ;;
+        armv7l)
+            arch="armv7l"
+            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-armv7-linux-androideabi.tar.gz"
+            injector_filename="injector-armv7-linux-androideabi.tar.gz"
+            ;;
+        x86_64)
+            arch="x86_64"
+            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-x86_64-unknown-linux-gnu.tar.gz"
+            injector_filename="injector-x86_64-unknown-linux-gnu.tar.gz"
+            ;;
+        *)
+            echo -e "${RED} Unsupported architecture detected: $detected_arch. Exiting... ${RESET}"
+            exit 1
+            ;;
+    esac
+}
+
 # Prompt user to choose the architecture
 echo -e "${BOLD_RED}Please choose the architecture:${RESET}"
 echo -e "${BOLD_RED}1) aarch64${RESET}"
 echo -e "${BOLD_RED}2) armv7l${RESET}"
 echo -e "${BOLD_RED}3) x86_64${RESET}"
+echo -e "${BOLD_RED}4) Auto-detect${RESET}"
 read -p "$(echo -e ${BOLD_RED}Enter the number corresponding to the desired architecture:${RESET} ) " arch
 
 # Set variables according to the user's selection
@@ -59,8 +86,11 @@ case "$arch" in
         injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-x86_64-unknown-linux-gnu.tar.gz"
         injector_filename="injector-x86_64-unknown-linux-gnu.tar.gz"
         ;;
+    4)
+        auto_detect
+        ;;
     *)
-        echo "${RED} Invalid selection. Exiting..."
+        echo -e "${RED} Invalid selection. Exiting... ${RESET}"
         exit 1
         ;;
 esac
@@ -71,18 +101,18 @@ while IFS= read -r apk_file; do
   apk_files+=("$apk_file")
 done < <(find /storage/emulated/0/Download -type f -iname '*minecraft*.apk')
 if [ ${#apk_files[@]} -eq 0 ]; then
-    echo "${RED}No APK files containing 'minecraft' in their names were found.${RESET}"
+    echo -e "${RED}No APK files containing 'minecraft' in their names were found.${RESET}"
 elif [ ${#apk_files[@]} -eq 1 ]; then
     selected_apk="${apk_files[0]}"
-    echo "${BLUE} One APK found: $selected_apk ${RESET}"
+    echo -e "${BLUE} One APK found: $selected_apk ${RESET}"
 else
     echo "Multiple APK files found:"
     select selected_apk in "${apk_files[@]}"; do
         if [ -n "$selected_apk" ]; then
-            echo "Selected APK file: $selected_apk"
+            echo -e "Selected APK file: $selected_apk"
             break
         else
-            echo "${RED} Invalid choice. Please try again. ${RED}"
+            echo -e "${RED} Invalid choice. Please try again. ${RESET}"
         fi
     done
 fi
@@ -107,9 +137,9 @@ tar xvzf "$injector_filename"
 
 # Execute the injector
 if ./injector "$selected_apk" -a "$app_name" -p "$package_name" -o "$output_apk_name"; then
-    echo -e "Injection completed successfully\n"
+    echo -e "${GREEN} Injection completed successfully${RESET}\n"
 else
-    echo "${RED} Injection process failed. ${RESET}"
+    echo -e "${RED} Injection process failed. ${RESET}"
     exit 1
 fi
 
@@ -119,14 +149,14 @@ patch_dir="/storage/emulated/0/MCPatch"
 # Create the directory if it doesn't exist
 if [ ! -d "$patch_dir" ]; then
   mkdir -p "$patch_dir"
-  echo -e "\033[1;33m 'MCPatch' directory created successfully. Moving files...\033[0m"
+  echo -e "${BOLD_YELLOW} 'MCPatch' directory created successfully. Moving files...${RESET}"
   sleep 8
 else
-  echo -e "\033[1;33m 'MCPatch' directory already exists. Moving files...\033[0m"
+  echo -e "${BOLD_YELLOW} 'MCPatch' directory already exists. Moving files...${RESET}"
   sleep 5
 fi
 
 # Move the output APK to the MCPatch directory
 mv "$output_apk_name" "$patch_dir"
-echo -e "\033[0;32m Injection Process completed successfully.\033[0m"
+echo -e "${GREEN} Injection Process completed successfully.${RESET}"
 exit 0
