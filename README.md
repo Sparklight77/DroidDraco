@@ -1,4 +1,4 @@
-# Auto-Draco-Injector
+# DroidDraco
 
 A bash script designed for Termux to simplify the process of patching Minecraft with Draco-Injector. This script is inspired by the [callmesoumya2063 repository](https://github.com/CallMeSoumya2063/draco-injector-script), which is based on the work of [mcbegamerxx9541](https://github.com/mcbegamerxx954/draco-injector). Special thanks to [callmesoumya2063](https://github.com/CallMeSoumya2063) for testing, fixing issues, and providing the Minecraft scanner script.
 
