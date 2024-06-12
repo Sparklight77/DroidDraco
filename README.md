@@ -12,8 +12,7 @@ armabi-v7a (armv7l)
 Intel x86_64
 
 # ⚠️ Important
-1. Beta patching is not supported currently. Only stable releases can be patched.
-2. IOS is not supported 
+1. IOS is not supported 
 
 # ✏️ Tutorial
 1. Install [Termux](https://github.com/termux/termux-app/releases).
