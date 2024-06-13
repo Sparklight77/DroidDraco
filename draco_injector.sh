@@ -41,17 +41,17 @@ auto_detect() {
     case "$detected_arch" in
         aarch64)
             arch="aarch64"
-            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-aarch64-linux-android.tar.gz"
+            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.7/injector-aarch64-linux-android.tar.gz"
             injector_filename="injector-aarch64-linux-android.tar.gz"
             ;;
         armv7l)
             arch="armv7l"
-            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-armv7-linux-androideabi.tar.gz"
+            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.7/injector-armv7-linux-androideabi.tar.gz"
             injector_filename="injector-armv7-linux-androideabi.tar.gz"
             ;;
         x86_64)
             arch="x86_64"
-            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-x86_64-unknown-linux-gnu.tar.gz"
+            injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.7/injector-x86_64-unknown-linux-gnu.tar.gz"
             injector_filename="injector-x86_64-unknown-linux-gnu.tar.gz"
             ;;
         *)
@@ -73,17 +73,17 @@ read -p "$(echo -e ${BOLD_RED}Enter the number corresponding to the desired arch
 case "$arch" in
     1)
         arch="aarch64"
-        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-aarch64-linux-android.tar.gz"
+        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.7/injector-aarch64-linux-android.tar.gz"
         injector_filename="injector-aarch64-linux-android.tar.gz"
         ;;
     2)
         arch="armv7l"
-        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-armv7-linux-androideabi.tar.gz"
+        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.7/injector-armv7-linux-androideabi.tar.gz"
         injector_filename="injector-armv7-linux-androideabi.tar.gz"
         ;;
     3)
         arch="x86_64"
-        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-x86_64-unknown-linux-gnu.tar.gz"
+        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.7/injector-x86_64-unknown-linux-gnu.tar.gz"
         injector_filename="injector-x86_64-unknown-linux-gnu.tar.gz"
         ;;
     4)
