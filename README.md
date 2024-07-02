@@ -26,7 +26,7 @@ Intel x86_64
 6. After patching the Minecraft APK, you can find the patched APK in the `MCPatch` folder in the home directory.
 
 > [!Note]  
-> You need to be connected to the internet during the patch process. The Playstore version of Minecraft contains both 64-bit and 32-bit code in a single APK. To separate them, use [ApkTool M](https://maximoff.su/apktool/?lang=en) with the antisplit feature and place the resulting APK in the Downloads folder. Then run the injector start command. Note that patching and installing a 32-bit Minecraft APK on a 64-bit device may result in performance issues, so it's recommended to use the appropriate APK for your device.
+> You need to be connected to the internet during the patch process. Note that patching and installing a 32-bit Minecraft APK on a 64-bit device may result in performance issues, so it's recommended to use the appropriate APK for your device.
 
 > [!important]  
 > If you encounter any issues, report them in the [mcbegamerxx9541 repository](https://github.com/mcbegamerxx954/draco-injector/issues). Open an issue, describe your problem, and mention that you used this script for patching Minecraft.
