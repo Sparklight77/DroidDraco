@@ -32,6 +32,7 @@ storage_dir="storage"
 if [ -d "$storage_dir" ]; then
     echo -e " ${CYAN} Storage permission already granted to Termux. Proceeding... ${RESET}\n"
 else
+    echo -e " ${YELLOW} Granting storage permissions, press allow to proceed... ${RESET}"
     termux-setup-storage
 fi
 
